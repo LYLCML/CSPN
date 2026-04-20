@@ -1,0 +1,14 @@
+{
+    "inherit" : "./configs/basic.json",
+    "epoch_num"  : 300,
+    "milestones" : [150,225],
+    "warmup_epoch": 1,
+    "backbone" : "resnet18",
+    "cspn_model" : {
+        "model" : "cspn",
+        "en_latent" : 32,
+        "en_H_W": 8,
+        "projection_dim" : -1,
+        "rc_act" : false
+    }
+}
