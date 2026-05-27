@@ -179,7 +179,7 @@ class CSPNClassifier(nn.Module):
                 cls_er = torch.where(
                     same_class_mask.unsqueeze(1),
                     cls_er,
-                    torch.clamp(cls_er, max=100)
+                    torch.clamp(cls_er, max=1000)
                 )
             cls_ers.append(-cls_er)
             lts.append(lt)
